@@ -73,6 +73,8 @@ class ViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    // MARK: Keyboard-Notifications
+    
     @objc func handleKeyboardNotification(notification: Notification) {
         if let keyboardFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             self.keyboardFrame = keyboardFrame
@@ -95,6 +97,8 @@ class ViewController: UIViewController {
         default: break
         }
     }
+    
+    // MARK: Calculation
     
     func calculate() {
         let textfieldsDec = sumCells(cells: timeCells, param: .textfieldContent)
@@ -180,6 +184,8 @@ class ViewController: UIViewController {
         }
         return doubleValue
     }
+    
+    // Buttons IBAs
 
     @IBAction func arrangeButtonPressed(_ sender: Any) {
         buttonIsPressed = !buttonIsPressed
@@ -237,6 +243,8 @@ class ViewController: UIViewController {
         saveCellsAnd(reload: true)
     }
 }
+
+// MARK: Textfields-Extention
 
 extension ViewController: TimefieldDelegate, TimeCellDelegate, TitleTextfieldDelegate {
     func submit(titleTextfield: UITextField) {
@@ -303,6 +311,8 @@ extension ViewController: TimefieldDelegate, TimeCellDelegate, TitleTextfieldDel
         }
     }
 }
+
+// MARK: TableView-Extention
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
