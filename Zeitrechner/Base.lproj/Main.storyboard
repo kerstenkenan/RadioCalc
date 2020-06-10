@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ScP-VM-sfo">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="TPS-kD-k4e">
+            <objects>
+                <viewController id="ScP-VM-sfo" customClass="ViewController" customModule="Zeitrechner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bVa-Xf-8z0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radio-Calculator" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="rG9-mU-3yF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <color key="backgroundColor" name="resultLabel"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="0aT-8A-tB5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="55"/>
+                                </variation>
+                            </label>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BFj-J6-y4D">
+                                <rect key="frame" x="0.0" y="147" width="375" height="520"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timeCell1" id="3Dz-3G-Nlo" customClass="TimeCell" customModule="Zeitrechner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Dz-3G-Nlo" id="d2V-9J-oF8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="d8h-iH-ftL">
+                                                    <rect key="frame" x="50" y="7" width="275.5" height="106.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="7gl-8V-Z6d">
+                                                            <rect key="frame" x="0.0" y="0.0" width="225.5" height="106.5"/>
+                                                            <subviews>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUF-45-tMZ" customClass="TitleTextfield" customModule="Zeitrechner" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="31" height="18.5"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                    </variation>
+                                                                </textField>
+                                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00:00" textAlignment="right" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="fc0-tS-EEI" customClass="Timefield" customModule="Zeitrechner" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="26.5" width="225.5" height="80"/>
+                                                                    <color key="backgroundColor" name="background_textfield"/>
+                                                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="225" id="7DA-oO-A4M">
+                                                                            <variation key="heightClass=regular-widthClass=regular" constant="225"/>
+                                                                        </constraint>
+                                                                        <constraint firstAttribute="height" constant="80" id="U85-IB-f2d"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="60"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                </textField>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="680" id="58F-C8-y96"/>
+                                                            </constraints>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="58F-C8-y96"/>
+                                                                </mask>
+                                                            </variation>
+                                                            <variation key="heightClass=regular-widthClass=compact" axis="vertical" spacingType="standard"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <mask key="constraints">
+                                                                    <include reference="58F-C8-y96"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0nc-xB-LnI">
+                                                            <rect key="frame" x="245.5" y="18" width="30" height="70"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2h-2M-D8c">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="30" id="Zmz-fD-nYk"/>
+                                                                        <constraint firstAttribute="width" constant="30" id="dhn-wz-p9S"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="clock.fill" catalog="system">
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="default" weight="black"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="timeButtonPressed:" destination="3Dz-3G-Nlo" eventType="touchUpInside" id="LHJ-iI-KuY"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dr1-Jl-iUP">
+                                                                    <rect key="frame" x="0.0" y="40" width="30" height="30"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="30" id="TaH-aB-QSS"/>
+                                                                        <constraint firstAttribute="width" constant="30" id="gra-9X-IbC"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="plus.slash.minus" catalog="system">
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" weight="black"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="plusMinusButtonPressed:" destination="3Dz-3G-Nlo" eventType="touchUpInside" id="HNv-aK-qLG"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="30" id="VwY-81-IW9"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="d8h-iH-ftL" firstAttribute="centerX" secondItem="d2V-9J-oF8" secondAttribute="centerX" id="GsH-h2-baO"/>
+                                                <constraint firstItem="d8h-iH-ftL" firstAttribute="centerY" secondItem="d2V-9J-oF8" secondAttribute="centerY" id="dvv-RN-fgO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="stoppingTimeButton" destination="Dr1-Jl-iUP" id="Fo7-AX-CgF"/>
+                                            <outlet property="timeTextField" destination="fc0-tS-EEI" id="b1c-Ns-iYO"/>
+                                            <outlet property="titleField" destination="mUF-45-tMZ" id="GFM-r6-42D"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ScP-VM-sfo" id="4A4-eK-shM"/>
+                                    <outlet property="delegate" destination="ScP-VM-sfo" id="bBF-nL-JDc"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VB6-d0-6Lk">
+                                <rect key="frame" x="5" y="85" width="365" height="52"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7G-1D-sLF">
+                                        <rect key="frame" x="0.0" y="0.0" width="85.5" height="52"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="xmark.circle.fill" catalog="system">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clearAllButtonPressed:" destination="ScP-VM-sfo" eventType="touchUpInside" id="G4s-vQ-rTM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTA-T5-1Ir">
+                                        <rect key="frame" x="93.5" y="0.0" width="85" height="52"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="33"/>
+                                        <state key="normal" title="1h"/>
+                                        <connections>
+                                            <action selector="hourButtonPressed:" destination="ScP-VM-sfo" eventType="touchUpInside" id="E8N-6E-Nev"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnU-qT-e1I">
+                                        <rect key="frame" x="186.5" y="0.0" width="85.5" height="52"/>
+                                        <state key="normal" image="plus.circle.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didInsertButtonPressed" destination="ScP-VM-sfo" eventType="touchUpInside" id="Uf4-ae-wBI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JF1-ld-bkv">
+                                        <rect key="frame" x="280" y="0.0" width="85" height="52"/>
+                                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="list.number" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large"/>
+                                        </state>
+                                        <state key="selected" image="list.number.rtl" catalog="system"/>
+                                        <connections>
+                                            <action selector="arrangeButtonPressed:" destination="ScP-VM-sfo" eventType="touchUpInside" id="3V9-gL-jls"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="background"/>
+                        <constraints>
+                            <constraint firstItem="rG9-mU-3yF" firstAttribute="top" secondItem="TZ7-9K-Efa" secondAttribute="top" id="2Fn-L7-1TB"/>
+                            <constraint firstItem="VB6-d0-6Lk" firstAttribute="centerX" secondItem="bVa-Xf-8z0" secondAttribute="centerX" id="Atw-C9-qfv"/>
+                            <constraint firstItem="BFj-J6-y4D" firstAttribute="leading" secondItem="TZ7-9K-Efa" secondAttribute="leading" id="CFF-SZ-JGQ"/>
+                            <constraint firstItem="TZ7-9K-Efa" firstAttribute="trailing" secondItem="VB6-d0-6Lk" secondAttribute="trailing" constant="5" id="G4h-BA-3X6"/>
+                            <constraint firstItem="VB6-d0-6Lk" firstAttribute="leading" secondItem="TZ7-9K-Efa" secondAttribute="leading" constant="5" id="REO-ns-Wmo"/>
+                            <constraint firstItem="rG9-mU-3yF" firstAttribute="trailing" secondItem="TZ7-9K-Efa" secondAttribute="trailing" id="RdC-S7-rs5"/>
+                            <constraint firstItem="VB6-d0-6Lk" firstAttribute="top" secondItem="rG9-mU-3yF" secondAttribute="bottom" constant="5" id="cYB-dY-2jv"/>
+                            <constraint firstItem="BFj-J6-y4D" firstAttribute="top" secondItem="VB6-d0-6Lk" secondAttribute="bottom" constant="10" id="hN8-yg-bYt"/>
+                            <constraint firstItem="rG9-mU-3yF" firstAttribute="leading" secondItem="TZ7-9K-Efa" secondAttribute="leading" id="wAA-Z1-dI5"/>
+                            <constraint firstItem="BFj-J6-y4D" firstAttribute="trailing" secondItem="TZ7-9K-Efa" secondAttribute="trailing" id="xXB-6F-r6w"/>
+                            <constraint firstItem="TZ7-9K-Efa" firstAttribute="bottom" secondItem="BFj-J6-y4D" secondAttribute="bottom" id="zcM-QP-knm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TZ7-9K-Efa"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                            <color key="value" red="1" green="0.0001922522367089341" blue="0.18865488747345915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="hourButton" destination="fTA-T5-1Ir" id="Kyv-O2-KMB"/>
+                        <outlet property="tableView" destination="BFj-J6-y4D" id="gOE-Rn-fFO"/>
+                        <outlet property="titleLabel" destination="rG9-mU-3yF" id="wD0-G5-2SC"/>
+                        <outletCollection property="titleLabelConstraints" destination="RdC-S7-rs5" collectionClass="NSMutableArray" id="yXo-v5-J7a"/>
+                        <outletCollection property="titleLabelConstraints" destination="wAA-Z1-dI5" collectionClass="NSMutableArray" id="rLf-hi-4xx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q0K-ea-zR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178.40000000000001" y="-157.87106446776613"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clock.fill" catalog="system" width="128" height="121"/>
+        <image name="list.number" catalog="system" width="128" height="97"/>
+        <image name="list.number.rtl" catalog="system" width="128" height="97"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="plus.slash.minus" catalog="system" width="128" height="115"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="background">
+            <color red="0.70899999141693115" green="0.18199999630451202" blue="0.21199999749660492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="background_textfield">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="resultLabel">
+            <color red="0.6679999828338623" green="0.17499999701976776" blue="0.21799999475479126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
