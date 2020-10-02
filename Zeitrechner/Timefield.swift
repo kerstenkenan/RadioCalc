@@ -23,12 +23,10 @@ class Timefield: UITextField, UITextFieldDelegate {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.sizeToFit()
         self.layer.shadowOffset = CGSize(width: 10, height: 10)
         self.layer.shadowRadius = 5
         self.layer.shadowColor = UIColor.darkGray.cgColor
         self.layer.shadowOpacity = 0.8
-        self.layer.masksToBounds = false
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -75,5 +73,9 @@ class Timefield: UITextField, UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         timefieldDelegate?.submit(textfield: textField, clearedOut: false)
         return true
+    }
+    
+    override func clearButtonRect(forBounds bounds: CGRect) -> CGRect {
+        return CGRect(x: self.bounds.maxX - 25, y: self.bounds.midY - 10, width: 20, height: 20)
     }
 }

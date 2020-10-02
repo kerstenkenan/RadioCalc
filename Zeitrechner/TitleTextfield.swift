@@ -28,4 +28,8 @@ class TitleTextfield: UITextField, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         titleTextfieldDelegate?.submit(titleTextfield: textField)
     }
+    
+    override func clearButtonRect(forBounds bounds: CGRect) -> CGRect {
+        return CGRect(x: self.bounds.maxX - 25, y: self.bounds.midY - 10, width: 20, height: 20)
+    }
 }

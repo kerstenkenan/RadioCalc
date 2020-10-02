@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ScP-VM-sfo">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ScP-VM-sfo">
+    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,11 +16,11 @@
             <objects>
                 <viewController id="ScP-VM-sfo" customClass="ViewController" customModule="Zeitrechner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bVa-Xf-8z0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radio-Calculator" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="rG9-mU-3yF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="0.0" width="810" height="80"/>
                                 <color key="backgroundColor" name="resultLabel"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -33,41 +35,47 @@
                                 </variation>
                             </label>
                             <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BFj-J6-y4D">
-                                <rect key="frame" x="0.0" y="147" width="375" height="520"/>
+                                <rect key="frame" x="0.0" y="147" width="810" height="933"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timeCell1" id="3Dz-3G-Nlo" customClass="TimeCell" customModule="Zeitrechner" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                        <rect key="frame" x="0.0" y="28" width="810" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Dz-3G-Nlo" id="d2V-9J-oF8">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="810" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="d8h-iH-ftL">
-                                                    <rect key="frame" x="50" y="7" width="275.5" height="106.5"/>
+                                                    <rect key="frame" x="40" y="20" width="730" height="80"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="7gl-8V-Z6d">
-                                                            <rect key="frame" x="0.0" y="0.0" width="225.5" height="106.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="680" height="80"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUF-45-tMZ" customClass="TitleTextfield" customModule="Zeitrechner" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="31" height="18.5"/>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mUF-45-tMZ" customClass="TitleTextfield" customModule="Zeitrechner" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="417" height="55.5"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="223" id="uB2-RG-2To"/>
+                                                                    </constraints>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
                                                                     <textInputTraits key="textInputTraits"/>
+                                                                    <variation key="widthClass=regular">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="uB2-RG-2To"/>
+                                                                        </mask>
+                                                                    </variation>
                                                                     <variation key="heightClass=regular-widthClass=compact">
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                                     </variation>
                                                                 </textField>
-                                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00:00" textAlignment="right" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="fc0-tS-EEI" customClass="Timefield" customModule="Zeitrechner" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="26.5" width="225.5" height="80"/>
+                                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00:00" textAlignment="right" adjustsFontSizeToFit="NO" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="fc0-tS-EEI" customClass="Timefield" customModule="Zeitrechner" customModuleProvider="target">
+                                                                    <rect key="frame" x="457" y="0.0" width="223" height="80"/>
                                                                     <color key="backgroundColor" name="background_textfield"/>
-                                                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="tintColor" systemColor="darkTextColor"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="225" id="7DA-oO-A4M">
-                                                                            <variation key="heightClass=regular-widthClass=regular" constant="225"/>
-                                                                        </constraint>
                                                                         <constraint firstAttribute="height" constant="80" id="U85-IB-f2d"/>
+                                                                        <constraint firstAttribute="width" constant="223" id="ahY-PL-o5t"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="60"/>
                                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -89,7 +97,7 @@
                                                             </variation>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0nc-xB-LnI">
-                                                            <rect key="frame" x="245.5" y="18" width="30" height="70"/>
+                                                            <rect key="frame" x="700" y="5" width="30" height="70"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2h-2M-D8c">
                                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -143,22 +151,22 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VB6-d0-6Lk">
-                                <rect key="frame" x="5" y="85" width="365" height="52"/>
+                                <rect key="frame" x="5" y="85" width="800" height="52"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7G-1D-sLF">
-                                        <rect key="frame" x="0.0" y="0.0" width="85.5" height="52"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="194" height="52"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="linkColor"/>
                                         <state key="normal" image="xmark.circle.fill" catalog="system">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" systemColor="darkTextColor"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26" scale="large"/>
                                         </state>
                                         <connections>
                                             <action selector="clearAllButtonPressed:" destination="ScP-VM-sfo" eventType="touchUpInside" id="G4s-vQ-rTM"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTA-T5-1Ir">
-                                        <rect key="frame" x="93.5" y="0.0" width="85" height="52"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTA-T5-1Ir">
+                                        <rect key="frame" x="202" y="0.0" width="194" height="52"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="33"/>
                                         <state key="normal" title="1h"/>
                                         <connections>
@@ -166,7 +174,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnU-qT-e1I">
-                                        <rect key="frame" x="186.5" y="0.0" width="85.5" height="52"/>
+                                        <rect key="frame" x="404" y="0.0" width="194" height="52"/>
                                         <state key="normal" image="plus.circle.fill" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large"/>
                                         </state>
@@ -175,8 +183,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JF1-ld-bkv">
-                                        <rect key="frame" x="280" y="0.0" width="85" height="52"/>
-                                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="606" y="0.0" width="194" height="52"/>
+                                        <color key="tintColor" systemColor="linkColor"/>
                                         <state key="normal" image="list.number" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large"/>
                                         </state>
@@ -188,6 +196,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="TZ7-9K-Efa"/>
                         <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="rG9-mU-3yF" firstAttribute="top" secondItem="TZ7-9K-Efa" secondAttribute="top" id="2Fn-L7-1TB"/>
@@ -202,7 +211,6 @@
                             <constraint firstItem="BFj-J6-y4D" firstAttribute="trailing" secondItem="TZ7-9K-Efa" secondAttribute="trailing" id="xXB-6F-r6w"/>
                             <constraint firstItem="TZ7-9K-Efa" firstAttribute="bottom" secondItem="BFj-J6-y4D" secondAttribute="bottom" id="zcM-QP-knm"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="TZ7-9K-Efa"/>
                     </view>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -241,5 +249,14 @@
         <namedColor name="resultLabel">
             <color red="0.6679999828338623" green="0.17499999701976776" blue="0.21799999475479126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
